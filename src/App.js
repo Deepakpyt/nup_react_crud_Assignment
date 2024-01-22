@@ -5,6 +5,7 @@ import { Update } from './components/Update';
 import { Read } from './components/Read';
 import { Menu, MenuItem } from 'semantic-ui-react';
 import { useEffect, useState } from 'react';
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 function App() {
   let urlPath = document.location.href;
@@ -50,6 +51,7 @@ function App() {
             <Route path="/read" element={<Read />} />
             <Route path="/update" element={<Update />} />
           </Routes>
+          <SpeedInsights />
         </div>
       </div>
     </div>
